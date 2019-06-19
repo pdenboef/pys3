@@ -1,3 +1,6 @@
+*.vscode
+pys3/__pycache__
+pys3/pys3_test.py
 pys3.egg-info
 build
 dist
