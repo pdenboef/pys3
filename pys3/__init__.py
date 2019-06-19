@@ -60,16 +60,25 @@ class PyS3:
     def tell(self):
         return self.fd.tell()
 
+    def seek(self, *args, **kwargs):
+        self.fd.seek(*args, **kwargs)
+
     def write(self, *args, **kwargs):
         self.modified = True
-        self.fd.write(*args, **kwargs)
+        return self.fd.write(*args, **kwargs)
 
     def writelines(self, *args, **kwargs):
         self.modified = True
-        self.fd.writelines(*args, **kwargs)
+        return self.fd.writelines(*args, **kwargs)
 
     def read(self, *args, **kwargs):
-        self.fd.read(*args, **kwargs)
+        return self.fd.read(*args, **kwargs)
+
+    def readline(self, *args, **kwargs):
+        return self.fd.readline(*args, **kwargs)
+
+    def readlines(self, *args, **kwargs):
+        return self.fd.readlines(*args, **kwargs)
 
     def close(self):
         self.fd.close()
