@@ -8,6 +8,8 @@ import os
 
 import boto3
 
+name = 'pys3'
+
 def is_s3_path(path):
     return path[0:5] == "s3://"
 

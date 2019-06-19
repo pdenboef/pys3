@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pys3",
-    version="0.0.3",
+    version="0.0.4",
     author="pdboef",
     author_email="p.d.boef@drebble.io",
     description="Tiny wrapper for basic S3 functions in boto3",
